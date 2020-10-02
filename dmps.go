@@ -4,17 +4,29 @@ import "context"
 
 type DMPS struct{}
 
-func (vs *DMPS) GetInputByOutput(ctx context.Context, output string) (string, error) {}
+func (vs *DMPS) GetAudioVideoInputs(ctx context.Context, output string) (map[string]string, error) {
+	return nil, nil
+}
 
-func (vs *DMPS) SetInputByOutput(ctx context.Context, output, input string) error {}
+func (vs *DMPS) SetAudioVideoInput(ctx context.Context, output, input string) error {
+	return nil
+}
 
-func (vs *DMPS) GetVolumeByBlock(ctx context.Context, block string) (int, error) {}
+func (vs *DMPS) GetVolumes(ctx context.Context, blocks []string) (map[string]int, error) {
+	return nil, nil
+}
 
-func (vs *DMPS) GetMutedByBlock(ctx context.Context, block string) (bool, error) {}
+func (vs *DMPS) GetMutes(ctx context.Context, blocks []string) (map[string]bool, error) {
+	return nil, nil
+}
 
-func (vs *DMPS) SetVolumeByBlock(ctx context.Context, block string, volume int) error {}
+func (vs *DMPS) SetVolume(ctx context.Context, block string, volume int) error {
+	return nil
+}
 
-func (vs *DMPS) SetMutedByBlock(ctx context.Context, block string, muted bool) error {}
+func (vs *DMPS) SetMuted(ctx context.Context, block string, muted bool) error {
+	return nil
+}
 
 func (vs *DMPS) GetInfo(ctx context.Context) (interface{}, error) {
 	return nil, nil
